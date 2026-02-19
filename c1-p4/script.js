@@ -21,7 +21,7 @@ function detectDevice() {
   } else {
     deviceTypeElement.textContent = "You are using a desktop.";
     featureList.innerHTML = `
-      <div class="${featureClass}">Desktop Feature 1</div>
+      <div class="${featureClass}">hello</div>
       <div class="${featureClass}">Desktop Feature 2</div>
       <div class="${featureClass}">Desktop Feature 3</div>
       <div class="${featureClass}">Desktop Feature 4</div>
