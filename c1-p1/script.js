@@ -1,7 +1,7 @@
 const toggleBtn = document.getElementById('theme-toggle');
 const storageMsg = document.getElementById('storage-msg');
 
-// 1. Check Local Storage on load
+// Check Local Storage on load
 const currentTheme = localStorage.getItem('theme');
 
 if (currentTheme === 'dark') {
@@ -11,15 +11,13 @@ if (currentTheme === 'dark') {
     storageMsg.innerText = "Status: Light Mode (Default)";
 }
 
-// 2. Event Listener for the button
+// Button click
 toggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    
-    // Determine the current state
+
     const isDark = document.body.classList.contains('dark-mode');
     const theme = isDark ? 'dark' : 'light';
 
-    // 3. Save to Web Storage
     localStorage.setItem('theme', theme);
-    storageMsg.innerText = `Preference updated: ${theme} mode saved to API`;
+    storageMsg.innerText = `Preference updated: ${theme} mode saved`;
 });
